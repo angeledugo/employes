@@ -23,9 +23,9 @@
                                 <td>{{ employee.name }}</td>
                                 <td>{{ employee.phone }}</td>
                                 <td>{{ employee.address }}</td>
-                                <td>{{ employee.tipo }}</td>
+                                <td>{{ employee.type.name }}</td>
                                 <td>
-                                    <router-link :to='{name:"typeEdit",params:{id:employee.id}}' class="btn btn-primary"><i class="fa fa-edit"></i></router-link>
+                                    <router-link :to='{name:"employeeEdit",params:{id:employee.id}}' class="btn btn-primary"><i class="fa fa-edit"></i></router-link>
                                     <a type="button" @click="borrarTipo(employee.id)" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>

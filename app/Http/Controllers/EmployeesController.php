@@ -15,7 +15,7 @@ class EmployeesController extends Controller
     public function index()
     {
         //
-        $employees = Employee::all();
+        $employees = Employee::with(['type'])->get();
 
         return response()->json($employees);
     }
@@ -39,6 +39,7 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request->post());
         $employee = Employee::create($request->post());
 
         return response()->json([
@@ -77,9 +78,14 @@ class EmployeesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Employee $employee)
     {
         //
+        $employee->fill($request->post())->save();
+
+        return response()->json([
+            'employee' => $employee
+        ]);
     }
 
     /**

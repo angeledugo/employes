@@ -20421,6 +20421,10 @@ var CreateEmployee = function CreateEmployee() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_employees_Create_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/employees/Create.vue */ "./resources/js/components/employees/Create.vue"));
 };
 
+var EditEmployee = function EditEmployee() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_employees_Edit_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/employees/Edit.vue */ "./resources/js/components/employees/Edit.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -20457,6 +20461,10 @@ var routes = [{
   name: 'children',
   path: '/children',
   component: Childrens
+}, {
+  name: 'employeeEdit',
+  path: '/employee/:id',
+  component: EditEmployee
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -43884,7 +43892,7 @@ function compileToFunction(template, options) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Type_vue":1,"resources_js_components_Contracts_vue":1,"resources_js_components_Employees_vue":1,"resources_js_components_Childrens_vue":1,"resources_js_components_type_Show_vue":1,"resources_js_components_type_Create_vue":1,"resources_js_components_type_Edit_vue":1,"resources_js_components_employees_Show_vue":1,"resources_js_components_employees_Create_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_Type_vue":1,"resources_js_components_Contracts_vue":1,"resources_js_components_Employees_vue":1,"resources_js_components_Childrens_vue":1,"resources_js_components_type_Show_vue":1,"resources_js_components_type_Create_vue":1,"resources_js_components_type_Edit_vue":1,"resources_js_components_employees_Show_vue":1,"resources_js_components_employees_Create_vue":1,"resources_js_components_employees_Edit_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

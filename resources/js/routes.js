@@ -14,6 +14,7 @@ const EditType = () => import('./components/type/Edit.vue');
 
 const ShowEmployees = () => import('./components/employees/Show.vue');
 const CreateEmployee = () => import('./components/employees/Create.vue');
+const EditEmployee = () => import('./components/employees/Edit.vue');
 
 const routes = [
     {
@@ -60,7 +61,12 @@ const routes = [
         name: 'children',
         path: '/children',
         component: Childrens
-    }
+    },
+    {
+        name: 'employeeEdit',
+        path: '/employee/:id',
+        component: EditEmployee
+    },
 ];
 
 const router = createRouter({
