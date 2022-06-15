@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::resource('type', App\Http\Controllers\TypeController::class)->only(['index','store','update','show','destroy']);
+Route::resource('employee', App\Http\Controllers\EmployeesController::class)->only(['index','store','update','show','destroy']);

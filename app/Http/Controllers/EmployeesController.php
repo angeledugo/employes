@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Employee;
 
 class EmployeesController extends Controller
 {
@@ -14,6 +15,9 @@ class EmployeesController extends Controller
     public function index()
     {
         //
+        $employees = Employee::all();
+
+        return response()->json($employees);
     }
 
     /**
@@ -35,6 +39,12 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         //
+        $employee = Employee::create($request->post());
+
+        return response()->json([
+            'employee' => $employee,
+
+        ]);
     }
 
     /**
@@ -43,9 +53,10 @@ class EmployeesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Employee $employee)
     {
         //
+        return response()->json($employee);
     }
 
     /**

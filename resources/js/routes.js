@@ -11,6 +11,10 @@ const ShowTpe = () => import('./components/type/Show.vue');
 const CreateType = () => import('./components/type/Create.vue');
 const EditType = () => import('./components/type/Edit.vue');
 
+
+const ShowEmployees = () => import('./components/employees/Show.vue');
+const CreateEmployee = () => import('./components/employees/Create.vue');
+
 const routes = [
     {
         name: 'home',
@@ -45,7 +49,12 @@ const routes = [
     {
         name: 'employee',
         path: '/employee',
-        component: Employees
+        component: ShowEmployees
+    },
+    {
+        name: 'employeeCreate',
+        path: '/employee/create',
+        component: CreateEmployee
     },
     {
         name: 'children',
