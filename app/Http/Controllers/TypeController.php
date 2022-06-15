@@ -45,7 +45,7 @@ class TypeController extends Controller
         return response()->json([
             'type' => $type,
 
-        ])
+        ]);
     }
 
     /**
@@ -85,7 +85,7 @@ class TypeController extends Controller
 
         return response()->json([
             'type' => $blog
-        ])
+        ]);
     }
 
     /**
