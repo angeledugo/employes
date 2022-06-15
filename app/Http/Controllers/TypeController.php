@@ -54,7 +54,7 @@ class TypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Type $tpye)
+    public function show(Type $type)
     {
         //
         return response()->json($type);
@@ -84,7 +84,7 @@ class TypeController extends Controller
         $type->fill($request->post())->save();
 
         return response()->json([
-            'type' => $blog
+            'type' => $type
         ]);
     }
 

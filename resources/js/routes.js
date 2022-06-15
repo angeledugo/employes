@@ -3,6 +3,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const Home = () => import('./components/Home.vue');
 const Type = () => import('./components/Type.vue');
+const Contracts = () => import('./components/Contracts.vue');
+const Employees = () => import('./components/Employees.vue');
+const Childrens = () => import('./components/Childrens.vue');
 
 const ShowTpe = () => import('./components/type/Show.vue');
 const CreateType = () => import('./components/type/Create.vue');
@@ -17,7 +20,7 @@ const routes = [
     {
         name: 'type',
         path: '/type',
-        component: Type
+        component: ShowTpe
     },
     {
         name: 'typeShow',
@@ -33,6 +36,21 @@ const routes = [
         name: 'typeEdit',
         path: '/types/:id',
         component: EditType
+    },
+    {
+        name: 'contract',
+        path: '/contract',
+        component: Contracts
+    },
+    {
+        name: 'employee',
+        path: '/employee',
+        component: Employees
+    },
+    {
+        name: 'children',
+        path: '/children',
+        component: Childrens
     }
 ];
 
